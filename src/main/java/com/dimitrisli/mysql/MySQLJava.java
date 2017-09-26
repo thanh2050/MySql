@@ -58,7 +58,6 @@ public class MySQLJava {
 	private List<Entity>  getResultSet(ResultSet resultSet) throws Exception {
 		List<Entity> result = new ArrayList<Entity>() ;
 
-
 		while(resultSet.next()){
 			Entity item = new Entity();
 			Integer id = resultSet.getInt(TestTableColumns.id.toString());
@@ -66,12 +65,7 @@ public class MySQLJava {
 
 			item.id = id;
 			item.text = text;
-
-
 			result.add(item);
-
-
-
 		}
 
 		return result;
